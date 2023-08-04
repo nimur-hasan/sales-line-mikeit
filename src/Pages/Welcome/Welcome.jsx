@@ -17,10 +17,11 @@ export default function Welcome() {
     setTimeout( countDown, 2000);
 
     return (
-        <div className='w-full h-full flex  items-center'>
+        <div className='w-full h-full'>            
             <div >
-                <h1 className='text-3xl'>Welcome to <span>SalesLine</span></h1>
-                <h3 >Income for 2022</h3>
+                <h1 className='text-[32px] font-semibold text-[#003358]'>Welcome to <span>SalesLine</span></h1>
+                <p className='text-[20px] my-[22px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Income for 2023</h3>
 
                 <p> {!loading &&
                     <MonthlyIncomeChart/>}
@@ -33,7 +34,7 @@ export default function Welcome() {
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <h3 >Income for This Week</h3>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Income for This Week</h3>
 
                 <p> {!loading &&
                     <DailyIncomeChart/>}
@@ -46,7 +47,7 @@ export default function Welcome() {
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <h3 >Income for Last Week</h3>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Income for Last Week</h3>
 
                 <p> {!loading &&
                     <DailyIncomeChartLastW/>}
@@ -57,7 +58,8 @@ export default function Welcome() {
                     }
                 </p>
                 <hr/>
-                <h3 >Expenses for 2022</h3>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Expenses for 202
+                3</h3>
 
                 <p> {!loading &&
                     <MonthlyExpenseChart/>}
@@ -70,7 +72,7 @@ export default function Welcome() {
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <h3 >Expenses for This Week</h3>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Expenses for This Week</h3>
 
                 <p> {!loading &&
                     <DailyExpenseChart/>}
@@ -83,7 +85,7 @@ export default function Welcome() {
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <h3 >Expenses for Last Week</h3>
+                <h3 className='text-[32px] font-semibold text-[#003358]'>Expenses for Last Week</h3>
 
                 <p> {!loading &&
                     <DailyExpenseChartLastW/>}

@@ -3,20 +3,20 @@ import {NavLink} from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function PublicAppBar() {
+export default function HomeAppBar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
     const closeMenu = () => {
         setMenuOpen(false)
     }
     return (
-        <div className='bg-[#003358] w-full text-white py-[28px]'>
-            <div className='container mx-auto flex justify-between items-center'>
+        <div className='bg-opacity-0 absolute w-full text-white'>
+            <div className='container mx-auto flex justify-between items-start'>
                 <NavLink to="/home">
-                    <img src="/assets/logo-horizontal.png" alt="SalesLine Logo" className=' h-[50px]'/>
+                    <img src="/assets/logo.png" alt="SalesLine Logo" className='pt-[42px] w-[120px]'/>
                 </NavLink>
                 <div>
-                    <ul className='hidden md:flex items-center space-x-10'>
+                    <ul className='hidden md:flex items-center space-x-10 mt-10'>
                         <li><NavLink
                             className={(isActive) => isActive ? "text-white" : 'text-white'}
                             to="/home">Home</NavLink></li>

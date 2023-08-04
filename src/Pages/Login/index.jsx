@@ -8,6 +8,7 @@ import {useHistory, useLocation} from 'react-router-dom';
 import {UserContext} from '../../App';
 import { FcGoogle } from "react-icons/fc";
 import { BiLogoFacebookCircle } from "react-icons/bi";
+import { Link } from 'react-router-dom'
 
 export default function Login() {
 
@@ -89,11 +90,11 @@ export default function Login() {
                             </div>
                             <h1 className='text-[36px] font-[Ramabhadra] text-[#212121] font-black text-center mt-[68px]'>Log In</h1>
                             <div className='grid grid-cols-2 gap-[36px] mt-[32px]'>
-                                <div className='flex items-center gap-[14px] border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
+                                <div className='flex items-center gap-[14px] cursor-pointer border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
                                     <FcGoogle className='h-[36px] w-[36px]'/>
                                     <span className='text-[15px] text-[#747474]'>Sign up with Google</span>
                                 </div>
-                                <div className='flex items-center gap-[14px] border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
+                                <div className='flex items-center cursor-pointer gap-[14px] border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
                                     <BiLogoFacebookCircle className='h-[36px] w-[36px] text-blue-600'/>
                                     <span className='text-[15px] text-[#747474]'>Sign up with Facebook</span>
                                 </div>
@@ -113,12 +114,12 @@ export default function Login() {
                                              required={true}/>
                             </div>
                             <div className="flex justify-center">
-                                <button type='submit' className='text-[20px] mt-[48px] font-bold text-white py-[18px] px-[74px] bg-[#B38B00] rounded-[20px]'>
+                                <button disabled={loading} type='submit' className='text-[20px] mt-[48px] font-bold text-white py-[18px] px-[74px] bg-[#B38B00] rounded-[20px]'>
                                     Log In
                                 </button>
                             </div>
 
-                            <p className='text-[15px] text-[#747474] text-center mt-[15px]'>Don’t have an account? <span className='text-[#A38348]'>Sign up</span></p>
+                            <p className='text-[15px] text-[#747474] text-center mt-[15px]'>Don’t have an account? <Link to='/register'><span className='text-[#A38348]'>Sign up</span></Link></p>
                         </form>
                     </div>
                 </div>

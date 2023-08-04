@@ -38,116 +38,116 @@ export default function SideBar() {
     };
 
     return (
-        <Box sx={{width: '100%', maxWidth: 360, bgcolor: '#625038', color: '#fff'}}>
-            <nav aria-label="main mailbox folders">
+        <Box sx={{width: '100%', maxWidth: 360, bgcolor: '#003358', color: '#fff'}}>
+            <nav aria-label="main mailbox folders" className='px-6'>
                 <List>
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <ListAltOutlinedIcon/>
+                                    <img src='/assets/icon_home.png'/>
                                 </ListItemIcon>
-                                <ListItemText onClick={() => {
+                                <ListItemText className='text-[50px]' onClick={() => {
                                     history.push("/")
-                                }} primary="Dashboard"/>
+                                }} primary={<div className='text-[22px]'>Dashboard</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <AccountCircleOutlinedIcon/>
+                                <img src='/assets/icon_start.png'/>
                                 </ListItemIcon>
                                 <ListItemText onClick={() => {
                                     history.push("/all-users")
-                                }} primary="All Users"/>
+                                }} primary={<div className='text-[22px]'>All Users</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
-                    <ListItem disablePadding>
+                    <ListItem disablePadding  className='border-b py-[14px]'>
                         <ListItemButton>
                             <ListItemIcon sx={{color: "#fff"}}>
-                                <AddCircleOutlineOutlinedIcon/>
+                                <img src='/assets/icon_state.png'/>
                             </ListItemIcon>
                             <ListItemText onClick={() => {
                                 history.push("/add-payment")
-                            }} primary="Daily Sales Entry"/>
+                            }} primary={<div className='text-[22px]'>Daily Sales Entry</div>}/>
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding>
+                    <ListItem disablePadding  className='border-b py-[14px]'>
                         <ListItemButton>
                             <ListItemIcon sx={{color: "#fff"}}>
-                                <AddCircleOutlineOutlinedIcon/>
+                                <img src='/assets/icon_state.png'/>
                             </ListItemIcon>
                             <ListItemText onClick={() => {
                                 history.push("/spent-money")
-                            }} primary="Spent Money ( Expenditure )"/>
+                            }} primary={<div className='text-[22px]'>Spent Money<br/>( Expenditure )</div>}/>
                         </ListItemButton>
                     </ListItem>
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <AddCircleOutlineOutlinedIcon/>
+                                    <img src='/assets/icon_start.png'/>
                                 </ListItemIcon>
                                 <ListItemText onClick={() => {
                                     history.push("/register-product-or-service")
-                                }} primary="Register a Product / Service"/>
+                                }} primary={<div className='text-[22px]'>Register a<br/>Product / Service</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
 
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <AddCircleOutlineOutlinedIcon/>
+                                    <img src='/assets/icon_start.png'/>
                                 </ListItemIcon>
                                 <ListItemText onClick={() => {
                                     history.push("/add-a-new-customer")
-                                }} primary="Add a New Customer"/>
+                                }} primary={<div className='text-[22px]'>Add a New<br/>Customer</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
 
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <ListAltOutlinedIcon/>
+                                    <img src='/assets/icon_start.png'/>
                                 </ListItemIcon>
                                 <ListItemText onClick={() => {
                                     history.push("/all-products-or-services")
-                                }} primary="All Products / Services"/>
+                                }} primary={<div className='text-[22px]'>All Products /<br/>Services</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
 
                     {
-                        loggedInUser.user.isAdmin &&
-                        <ListItem disablePadding>
+                        loggedInUser?.user?.isAdmin &&
+                        <ListItem disablePadding  className='border-b py-[14px]'>
                             <ListItemButton>
                                 <ListItemIcon sx={{color: "#fff"}}>
-                                    <ListAltOutlinedIcon/>
+                                <img src='/assets/icon_start.png'/>
                                 </ListItemIcon>
                                 <ListItemText onClick={() => {
                                     history.push("/all-customers")
-                                }} primary="All Customers"/>
+                                }} primary={<div className='text-[22px]'>All Customers</div>}/>
                             </ListItemButton>
                         </ListItem>
                     }
 
-                    <ListItemButton onClick={handleClick}>
+                    <ListItemButton sx={{padding: '18px', borderBottom: '1px solid white'}} onClick={handleClick}>
                         <ListItemIcon sx={{color: '#fff'}}>
-                            <AssessmentOutlinedIcon/>
+                        <img src='/assets/icon_state.png'/>
                         </ListItemIcon>
-                        <ListItemText primary="Income Reports"/>
+                        <ListItemText primary={<div className='text-[22px]'>Income Reports</div>}/>
                         {open ? <ExpandLess/> : <ExpandMore/>}
                     </ListItemButton>
                     <Collapse in={open} timeout="auto" unmountOnExit>
@@ -212,11 +212,11 @@ export default function SideBar() {
 
                         </List>
                     </Collapse>
-                    <ListItemButton onClick={handleClick2}>
+                    <ListItemButton sx={{padding: '18px', borderBottom: '1px solid white'}} onClick={handleClick2}>
                         <ListItemIcon sx={{color: '#fff'}}>
-                            <AssessmentOutlinedIcon/>
+                            <img src='/assets/icon_state.png'/>
                         </ListItemIcon>
-                        <ListItemText primary="Expenditure Reports"/>
+                        <ListItemText primary={<div className='text-[22px]'>Expenditure Reports</div>}/>
                         {open2 ? <ExpandLess/> : <ExpandMore/>}
                     </ListItemButton>
                     <Collapse in={open2} timeout="auto" unmountOnExit>

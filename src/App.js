@@ -39,6 +39,7 @@ import PublicLayout from './Layout/PublicLayout';
 import Pricing from './Pages/Pricing/Pricing';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import  AllAuditTrails from "./Pages/AllAuditTrails"
+import AboutUs from './Pages/AboutUs';
 
 export const UserContext = createContext();
 
@@ -61,9 +62,7 @@ function App() {
                         }
                     </Route>
                     <Route exact path="/home">
-                        <PublicLayout>
-                            <Home/>
-                        </PublicLayout>
+                        <Home/>                        
                     </Route>
 
                     <Route exact path="/pricing">
@@ -74,6 +73,11 @@ function App() {
                     <Route exact path="/contact-us">
                         <PublicLayout>
                             <ContactUs/>
+                        </PublicLayout>
+                    </Route>
+                    <Route exact path="/about-us">
+                        <PublicLayout>
+                            <AboutUs/>
                         </PublicLayout>
                     </Route>
                     <PrivateRoute exact path="/all-users">
@@ -154,10 +158,8 @@ function App() {
                     <Route path="/login">                        
                         <Login/>                        
                     </Route>
-                    <Route path="/register">
-                        <PublicLayout>
-                            <Register/>
-                        </PublicLayout>
+                    <Route path="/register">                
+                        <Register/>
                     </Route>
                     <Route path="*">
                         <NotFound/>

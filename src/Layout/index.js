@@ -6,9 +6,9 @@ export default function Layout({children}) {
     return (
         <div>
             <ResponsiveAppBar/>
-            <div className='flex'>
+            <div className='flex min-h-screen'>
                 <SideBar/>
-                <div className='p-[26px] w-full'>
+                <div className='p-[26px] bg-white w-full'>
                     {children}
                 </div>
             </div>

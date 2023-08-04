@@ -6,6 +6,7 @@ import axios from "axios";
 import NewsCard from "./NewsCard";
 import {GET_ALL_ARTICLES_URL} from "../../Constants/constants";
 import './Home.css'
+import HomeAppBar from "../../Layout/HomeAppBar";
 
 export default function Home() {
     const settings = {
@@ -56,6 +57,9 @@ export default function Home() {
 
     return (
         <div>
+            {/* ❤️‍🔥 Header */}
+            <HomeAppBar/>
+            
             <div style={{backgroundImage: `url(/assets/home-hero-art.png)`}} className="min-h-[870px] bg-[#003358] bg-cover bg-no-repeat">
                 <div className="container mx-auto text-white pt-[220px]">
                     <div className="">
