@@ -11,9 +11,9 @@ export default function HomeAppBar() {
     }
     return (
         <div className='bg-opacity-0 absolute w-full text-white'>
-            <div className='container mx-auto flex justify-between items-start'>
+            <div className='container mx-auto flex justify-between items-center py-2.5 md:py-0 pl-5 md:pl-0 md:items-start'>
                 <NavLink to="/home">
-                    <img src="/assets/logo.png" alt="SalesLine Logo" className='pt-[42px] w-[120px]'/>
+                    <img src="/assets/logo.png" alt="SalesLine Logo" className='md:pt-[42px] w-[50px] md:w-[120px]'/>
                 </NavLink>
                 <div>
                     <ul className='hidden md:flex items-center space-x-10 mt-10'>
@@ -51,17 +51,20 @@ export default function HomeAppBar() {
                             {/* <li><NavLink onClick={closeMenu} className={(isActive)=> isActive?"text-[#625038] border-b-2 border-[#F6C88D]":'text-black'} to="/pricing">Pricing</NavLink></li> */}
                             <li><NavLink onClick={closeMenu}
                                          className={(isActive) => isActive ? "text-[#625038] border-b-2 border-[#F6C88D]" : 'text-black'}
+                                         to="/about-us">About Us</NavLink></li>
+                            <li><NavLink onClick={closeMenu}
+                                         className={(isActive) => isActive ? "text-[#625038] border-b-2 border-[#F6C88D]" : 'text-black'}
                                          to="/contact-us">Contact Us</NavLink></li>
                             <li><NavLink onClick={closeMenu}
                                          className={(isActive) => isActive ? "text-[#625038] border-b-2 border-[#F6C88D]" : 'text-black'}
-                                         to="/register">Register</NavLink></li>
+                                         to="/login">
+                                        Login
+                            </NavLink></li>
                             <li><NavLink onClick={closeMenu}
                                          className={(isActive) => isActive ? "text-[#625038] border-b-2 border-[#F6C88D]" : 'text-black'}
-                                         to="/login">
-                                <button className='bg-[#625038] text-white rounded-md px-5 py-2'>Login</button>
-
-
-                            </NavLink></li>
+                                         to="/register">
+                                          <button className='bg-[#B38B00] text-white rounded-md px-5 py-2'>Sign Up</button>  
+                                </NavLink></li>
                         </ul>
                     }
                 </div>

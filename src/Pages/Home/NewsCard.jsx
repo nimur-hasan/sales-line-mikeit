@@ -2,24 +2,24 @@ import React from "react";
 
 const NewsCard = ({data}) => {
 
-    return (
-        <div className="mb-5 ">
-            <div className="shadow-md border-4 rounded-xl border-white bg-[#625038] min-h-[500px] pt-[90px] px-[57px]">
-                <a target="_blank" href={data.link}><h3
-                    className="text-center text-white font-[Roboto] font-bold text-[20px] leading-[30px]">
+    return (        
+        <a href={data.link}>
+            <div className="bg-[#D9D9D9] bg-opacity-20 px-[30px] md:px-[50px] py-[28px] rounded-[9px] mt-[36px]">
+                <h1 className="text-[20px] text-center md:text-left md:text-[22px] md:leading-[24px] font-bold">
                     {data.news_name}
-                </h3></a>
-                <a target="_blank" href={data.link}>
-                    <div className="font-[Roboto] text-[20px] leading-[30px] mt-[17px] text-white text-center">
-                        {data.body}
-                        <hr/>
-                        --{data.medium}
-                    </div>
-                </a>
-                <div className="font-[Roboto] text-[20px] leading-[30px] mt-[17px] text-white text-center"><a
-                    target="_blank" href={data.link}>Find Out More >></a></div>
+                    <hr/>
+                    --{data.medium}
+                </h1>
+                <p className="mt-2.5 text-[16px] text-center md:text-left">
+                    {data.body}
+                </p>
+                <div className="flex justify-end">
+                    <a href={data.link}>
+                        <p className="font-medium text-[20px] bg-none">Read More...</p>
+                    </a>
+                </div>
             </div>
-        </div>
+        </a>
     );
 };
 

@@ -2,10 +2,9 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
-        <div className='bg-white min-h-screen container mx-auto py-[52px]'>
+        <div className='bg-white min-h-screen container mx-auto py-[52px] px-4 md:px-0'>
             
-            <div className='flex gap-[67px] items-center justify-center '>
-                
+            <div className='flex flex-col md:flex-row gap-[67px] items-center justify-center '>                
                 <img className='h-[280px] w-[186px]' src="/assets/about1.png" alt="" />
                 <div className=''>
                     <h1 className='font-bold text-[#003358] text-[40px] font-[Montserrat] '>About Us</h1>
@@ -14,7 +13,7 @@ const AboutUs = () => {
 
                 </div>
             </div>
-            <div className='flex gap-[67px] mt-[20px]  items-center justify-center '>
+            <div className='flex flex-col md:flex-row gap-[67px] mt-[100px] md:mt-[20px]  items-center justify-center '>
                 <img className='h-[280px] w-[186px]' src="/assets/about2.png" alt="" />
                 <div>
                     <h1 className='font-bold text-[#003358] text-[40px] font-[Montserrat] '>What We do</h1>
@@ -23,7 +22,7 @@ const AboutUs = () => {
 
                 </div>
             </div>
-            <div className='flex gap-[67px] mt-[20px]  items-center justify-center '>
+            <div className='flex flex-col md:flex-row gap-[67px] mt-[100px] md:mt-[20px]  items-center justify-center '>
                 
                 <img className='h-[280px] w-[186px]' src="/assets/about3.png" alt="" />
                 <div>

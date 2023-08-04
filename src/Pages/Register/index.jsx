@@ -95,21 +95,21 @@ export default function Register() {
         // </div>
         <div className='bg-[#003358] h-screen'>
             <div style={{backgroundImage: `url('/assets/auth-cover-art.png')`}} className='bg-[#003358] flex items-center bg-no-repeat bg-cover min-h-screen'>
-                <div className='container mx-auto p-[32px] flex justify-center'>
-                    <div className='bg-white w-[770px] min-h-[769px] rounded-[78px] py-[44px] px-[110px]'>
+            <div className='container w-full mx-auto p-[32px] flex justify-center'>
+                    <div className='bg-white w-full md:w-[770px] min-h-[769px] rounded-2xl md:rounded-[78px] py-[44px] px-4 md:px-[110px]'>
                         <form>
-                            <div className='flex justify-end text-[20px] font-[Roboto-Slab] text-black text-opacity-50'>
+                            <div className='flex justify-center md:justify-end text-[16px] md:text-[20px] font-[Roboto-Slab] text-black text-opacity-50'>
                                 <select>
                                     <option>English (UK)</option>
                                 </select>
                             </div>
-                            <h1 className='text-[36px] font-[Ramabhadra] text-[#212121] font-black text-center mt-[68px]'>CREATE ACCOUNT</h1>
-                            <div className='grid grid-cols-2 gap-[36px] mt-[32px]'>
-                                <div className='flex items-center gap-[14px] cursor-pointer border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
+                            <h1 className='text-[36px] font-[Ramabhadra] text-[#212121] font-black text-center mt-[40px] md:mt-[68px]'>CREATE AN ACCOUNT</h1>
+                            <div className='grid grid-cols-2 gap-4 md:gap-[36px] mt-[32px]'>
+                                <div className='col-span-2 md:col-span-1 flex items-center gap-[14px] cursor-pointer border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
                                     <FcGoogle className='h-[36px] w-[36px]'/>
                                     <span className='text-[15px] text-[#747474]'>Sign up with Google</span>
                                 </div>
-                                <div className='flex items-center cursor-pointer gap-[14px] border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
+                                <div className='col-span-2 md:col-span-1 flex items-center cursor-pointer gap-[14px] border border-[#BCBCBC] rounded-[20px] py-2.5 px-4'>
                                     <BiLogoFacebookCircle className='h-[36px] w-[36px] text-blue-600'/>
                                     <span className='text-[15px] text-[#747474]'>Sign up with Facebook</span>
                                 </div>
